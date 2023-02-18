@@ -1,4 +1,7 @@
-total_sales = 0
-daily_sales = 0
+total = 0
 
-monday = float(input("Enter total sales for Sunday:"))
+for days in ("Sunday", "Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday"):
+    sales = float(input("Total sales for\t" + days + ":"))
+    total += sales
+print("Total amount of sales for the week is:" + format(total, ",.2f"))
+print("Average sales for the week is:" + format(total / 7, ",.2f"))
